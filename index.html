@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="css/flower.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="css/pro_detail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dingdan.css"/>
+		<script src="js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lt IE 9]> 
+        <script> 
+           (function() {
+             if (! 
+             /*@cc_on!@*/
+             0) return;
+             var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+             var i= e.length;
+             while (i--){
+                 document.createElement(e[i])
+             } ;
+             
+             //IE78不支持伪类
+             $('li:last-child').css()
+        })() 
+        </script>
+        <![endif]-->
+	</head>
+	<body ng-controller="myController">
+		<header>
+			<div class="header_bar">
+				<div class="header_bar_con">
+					<div class="nav f_l">
+						<span>您好，欢迎来到美辰花礼网！[</span>
+						<a class="denglu_a">{{dlzhuangtai}}</a>
+						<span>]&nbsp;新用户？[</span>
+						<a class="zhuce_a">免费注册</a>
+						<span>]</span>
+					</div>
+					<div class="nav f_r">
+						<ul>
+							<li><a href="#">首页</a></li>
+							<li><a href="#/dingdan">订单查询</a></li>
+							<li><a href="#/cart" class="cart_a">购物车<b id="ccount"></b></a></li>
+							<li><a href="#">关于美辰</a></li>
+							<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2860144252&site=在线客服&menu=yes" class="iconfont">&#xe606;&nbsp;在线客服</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_logo_search">
+				<div class="header_logo_search_con">
+					<div class="logo f_l">
+						<h1>美辰花礼网</h1>
+					</div>
+					<div class="search f_r">
+						<form>
+							<span class="ipt_wrap">
+								<input type="text"  ng-model="searchText" placeholder="请输入您要查找的商品" class="ipt_search"/>
+							</span>
+							<span class="btn_wrap">
+								<a href="#/search" ng-click="searchTextFunc()" class="btn_search">搜索</a>
+							</span>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="header_menu">
+				<div class="header_menu_con">
+					<div class="all_sort">
+						<h2>全部商品分类&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont">&#xe633;</i></h2>
+						<div class="all_sort_list">
+							<div class="all_sort_list_con">
+								<h4>鲜花用途</h4>
+								<ul>
+									<li><a href="#/flower/aiqingxianhua">爱情鲜花</a></li>
+									<li><a href="">友情鲜花</a></li>
+									<li><a href="">生日鲜花</a></li>
+									<li><a href="">问候长辈</a></li>
+									<li><a href="">探病慰问</a></li>
+									<li><a href="">道歉鲜花</a></li>
+									<li><a href="">祝贺鲜花</a></li>
+									<li><a href="">婚庆鲜花</a></li>
+									<li><a href="">商务鲜花</a></li>
+								</ul>
+								<h4>鲜花花材</h4>
+								<ul>
+									<li><a href="">玫瑰</a></li>
+									<li><a href="">康乃馨</a></li>
+									<li><a href="">郁金香</a></li>
+									<li><a href="">百合</a></li>
+									<li><a href="">扶郎</a></li>
+									<li><a href="">马蹄莲</a></li>
+									<li><a href="">向日葵</a></li>
+								</ul>
+								<h4>鲜花类别</h4>
+								<ul>
+									<li><a href="">花束</a></li>
+									<li><a href="">花盒</a></li>
+									<li><a href="">瓶花</a></li>
+									<li><a href="">精品鲜花</a></li>
+									<li><a href="">果篮</a></li>
+									<li><a href="">桌面花篮</a></li>
+									<li><a href="">开业花蓝</a></li>
+								</ul>
+								<h4>永生花</h4>
+								<ul>
+									<li><a href="">经典花盒</a></li>
+									<li><a href="">巨型玫瑰</a></li>
+									<li><a href="">薰衣草</a></li>
+									<li><a href="">永生瓶花</a></li>
+									<li><a href="">特色永生花</a></li>
+								</ul>
+								<h4>蛋糕</h4>
+								<ul>
+									<li><a href="">元祖</a></li>
+									<li><a href="">好利来</a></li>
+									<li><a href="">可颂坊</a></li>
+								</ul>
+								<h4>绿植花卉</h4>
+								<ul>
+								<li><a href="">绿色植物</a></li>
+								<li><a href="">盆栽花卉</a></li>
+							</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="sort_nav">
+						<li><a href="#" class="nav_active">首页</a></li>
+						<li><a href="#">鲜花</a></li>
+						<li><a href="#/yongshenghua">永生花</a></li>
+						<li><a href="#">蛋糕</a></li>
+						<li><a href="#">礼品</a></li>
+						<li><a href="#">巧克力</a></li>
+						<li><a href="#">花语</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="search_box">
+				<span>您搜索的是</span>
+				<i>{{searchText}}</i>
+				<p>
+					没有符合条件的，您可以选择其他关键词进入查找
+					<a href="#/flower/aiqingxianhua">爱情鲜花</a>
+				</p>
+			</div>
+		</section>
+		<ng-view></ng-view>
+		<div class="denglu_box" ng-controller = "dlCtrl">
+			<div class="dl_head">
+				<h2>登陆美辰网</h2>
+				<i class="iconfont dl_close">&#xe603;</i>
+			</div>
+			<form name="dlForm" class="dlForm" ng-submit="submitForm()">
+				<p>
+					<input type="text" name="phonenumber" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" ng-model="userdata.phonenumber" required placeholder="请输入手机号"/>
+					<span style="color:red" ng-show="dlForm.phonenumber.$dirty && dlForm.phonenumber.$invalid">
+						<span class="error" ng-show="dlForm.phonenumber.$error.required||dlForm.phonenumber.$error.pattern">请正确输入手机号</span>
+					</span>
+				</p>
+				<p>
+					<input type="password" name="password" ng-model="userdata.password" ng-pattern="/^[0-9a-zA-Z_]{6,12}$/" required placeholder="请输入密码"/>
+					<span style="color:red" ng-show="dlForm.password.$dirty && dlForm.password.$invalid">
+						<span class="error" ng-show="dlForm.password.$error.required||dlForm.password.$error.pattern">密码不正确</span>
+					</span>
+				</p>
+				<p>
+					<input type="checkbox" class="checkbox_mm"> 
+					<i class="rem">记住密码</i>
+				</p>
+				<p>
+					<input type="submit" value="登    录" class="dl_btn" />
+				</p>
+				<div>
+					<a href="#" class="f_l">忘记密码</a>
+					<a href="#" class="f_r zhuce_a dl_close">免费注册</a>
+				</div>
+			</form>
+		</div>
+		<div class="zhuce_box" ng-controller = "zcCtrl">
+			<div class="zc_head">
+				<h2>注册美辰网账号</h2>
+				<i class="iconfont zc_close">&#xe603;</i>
+			</div>
+			<form name="zcForm" class="zcForm" ng-submit="submitForm()">
+				<p>
+					<input type="text" name="username" ng-model="userdata.username" ng-pattern="/^[0-9a-zA-Z_]{6,12}$/" required placeholder="请输入昵称"/>
+					<span style="color:red" ng-show="zcForm.username.$dirty && zcForm.username.$invalid">
+						<span class="error" ng-show="zcForm.username.$error.required||zcForm.username.$error.pattern">用户名为6-12个数字字母组合</span>
+					</span>
+				</p>
+				<p>
+					<input type="text" name="phonenumber" ng-model="userdata.phonenumber" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" required placeholder="请输入你要注册的手机号"/>
+					<span style="color:red" ng-show="zcForm.phonenumber.$dirty && zcForm.phonenumber.$invalid">
+						<span class="error" ng-show="zcForm.phonenumber.$error.required||zcForm.phonenumber.$error.pattern">请正确输入手机号</span>
+					</span>
+				</p>
+				<p>
+					<input type="password" name="password" ng-model="userdata.password" ng-pattern="/^[0-9a-zA-Z_]{6,12}$/" required placeholder="请输入6-12个数字字母密码"/>
+					<span style="color:red" ng-show="zcForm.password.$dirty && zcForm.password.$invalid">
+						<span class="error" ng-show="zcForm.password.$error.required||zcForm.password.$error.pattern">密码不正确</span>
+					</span>
+				</p>
+				<p>
+					<input type="password" name="password2" ng-model="userdata.password2" compare="userdata.password" required placeholder="请再次输入密码"/>
+					<span style="color:red" ng-show="zcForm.password2.$dirty && zcForm.password2.$invalid">
+						<span class="error" ng-show="zcForm.password2.$error.compare &&zcForm.password2.$dirty">两次密码不一致</span>
+					</span>
+				</p>
+				<p>
+					<input type="submit" value="注    册" class="zc_btn"/>
+				</p>
+			</form>
+		</div>
+		<div class="zhezhao_box"></div>
+		<p id="back-to-top"><a href="#top"><span class="iconfont">&#xe624;</span></a></p>
+		<footer>
+			<div class="footer">
+				<div class="friendLink">
+					<ul>
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">联系客服</a></li>
+						<li><a href="#">友情链接</a></li>
+					</ul>
+					<p class="meichen">Copyright © 美辰花礼网  2005-2017</p>
+				</div>
+			</div>
+		</footer>	
+	</body>
+</html>

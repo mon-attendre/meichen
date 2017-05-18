@@ -1,0 +1,58 @@
+.product_box{
+	margin: 0 auto;
+	width: 980px;
+	min-height: 800px;
+	padding-top: 20px;
+}
+.pro_item{
+	float: left;
+	margin:0 0 20px 2.4px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background: #FFFFFF;
+	box-sizing: border-box;
+}
+.img_box{
+	position: relative;
+	overflow: hidden;
+	width: 220px;
+	height: 240px;
+	margin-bottom: 10px;
+}
+.img_box img{
+	display: block;
+	width: 220px;
+	height: 240px;
+}
+.info_box .price{
+	margin-bottom: 8px;
+	color: #FF6600;
+}
+.info_box .price span{
+	font-weight: 800;
+	line-height: 18px;
+}
+.title{
+	font-size: 12px;
+	line-height: 18px;
+	overflow: hidden;
+	height: 36px;
+	margin-bottom: 8px;
+	text-align: justify;
+}
+.title a{
+	color: #737373;
+}
+.title .pro_title{
+	font-size: 12px;
+	display: block;
+	max-width: 220px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.title .feature{
+	display: block;
+	color: #f60;
+	
+}

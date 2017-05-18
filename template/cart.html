@@ -1,0 +1,59 @@
+<section class="cart_box">
+	<div class="content">
+		<table id="table" border="0" cellpadding="0" cellspacing="0"  class="hide">
+			<tr>
+				<td width="75px" all-orcan>
+					<input type="checkbox" id="allCheck" class="ck" />全选
+				</td>
+				<td width="110px">
+					商品名称
+				</td>
+				<td width="350px">
+					
+				</td>
+				<td width="130px">
+					数量
+				</th>
+				<td width="130px">
+					单价
+				</td>
+				<td>
+					小计
+				</td>
+				<td>
+					操作
+				</td>
+			</tr>
+           
+            <tr ng-repeat="data in dataList track by $index">
+                <td>
+                    <input type="checkbox" class="ck" />
+                </td>
+                <td>
+                    <img ng-src="{{data.PImg}}" alt="" />
+                </td>
+                <td>
+            		{{data.PTitle}}
+                </td>
+                <td>
+                    <button class="down" my-minus >-</button><input type="text" value="{{data.PAmount}}" readonly="readonly" ng-model="data.PAmount" /><button class="up" my-adds >+</button>
+                </td>
+                <td>
+                	￥<span>{{data.PPrice}}</span>
+                </td>
+                <td>
+                	￥<span>{{data.price}}</span>
+                </td>
+                <td>
+                    <button class="del" delete>删除</button>
+                </td>
+            </tr>
+		</table>
+		<div class="nothing"> <img src="img/nothing.png"/><h4>购物车还是空的，去逛逛吧！</h4></div>
+		<div class="cart_bottom">
+			<a href="#/home" class="f_l"><i class="iconfont">&#xe600;</i>返回继续挑选</a>
+			<h2 class="f_r tijiao">提交订单</h2>
+		</div>
+		
+	</div>
+</section>

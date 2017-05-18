@@ -1,0 +1,21 @@
+[{
+	"username": "111111", 
+	"phonenumber": "18111111111",
+	"password": "111111",
+	"password2": "111111"
+},{
+	"username": "222222", 
+	"phonenumber": "18222222222",
+	"password": "222222",
+	"password2": "222222"
+},{
+	"username": "333333", 
+	"phonenumber": "333333333",
+	"password": "333333",
+	"password2": "333333"
+},{
+	"username": "444444", 
+	"phonenumber": "18444444444",
+	"password": "444444",
+	"password2": "444444"
+}]

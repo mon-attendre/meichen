@@ -1,0 +1,29 @@
+.dingdan{
+	width: 980px;
+	margin-bottom: 20px;
+	border: solid 1px #F2F2F2;
+}
+.dingdan tr td{
+	height: 120px;
+	text-align: center;
+	border-bottom: 1px dashed #d9d9d9;
+}
+.dingdan tr:first-child td{
+	background: #ebebeb;
+	height: 40px;
+	text-indent: 20px;
+	text-align: left;
+}
+.dingdan tr:last-child td{
+	background: #ebebeb;
+	height: 40px;
+	border: none;
+}
+
+.dingdan tr td img{
+	width: 100px;
+	height: 100px;
+}
+.dingdan tr td span:first-child{
+	text-decoration: line-through;
+}

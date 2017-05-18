@@ -1,0 +1,99 @@
+.product-wrapper {
+	width: 980px;
+	height: 500px;
+	margin: 40px auto;
+	padding: 40px;
+	box-sizing: border-box;
+	border: 1px solid #D9D9D9;
+}
+
+.product-l {
+	/*float: left;*/
+	width: 400px;
+	height: 400px;
+	/*background: plum;*/
+}
+
+.pro-preview {
+	margin: 20px auto;
+	width: 330px;
+	height: 360px;
+}
+
+.pro-preview img {
+	width: 330px;
+	height: 360px;
+}
+
+.product-r {
+	padding: 20px 0;
+	width: 480px;
+	height: 400px;
+	position: relative;
+	/*	background: pink;*/
+}
+
+.product-title {
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+.attribute {
+	margin-bottom: 20px;
+}
+
+.attribute p {
+	/*background: plum;*/
+	font-size: 14px;
+	margin: 12px 0;
+}
+
+.attribute p:after {
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+
+.attribute p span {
+	/*display: block;*/
+	float: left;
+}
+
+.price p:first-child {
+	text-decoration: line-through;
+}
+
+.price p:last-child strong {
+	color: red;
+	font-size: 16px;
+}
+
+.btn-buy {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background: #bbb;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+}
+
+
+/*商品详情*/
+
+.pro_detail {
+	width: 980px;
+	margin: 0 auto;
+	padding: 40px;
+	border: 1px solid #D9D9D9;
+}
+
+.pro_detail>div img {
+	width: 900px;
+	margin-bottom: 30px;
+}

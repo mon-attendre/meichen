@@ -1,0 +1,22 @@
+<section>
+	<div class="product_box">
+		<div class="pro_item"  pid="1001" ng-repeat="list in listDate">
+			<div class="img_box">
+				<a href="#/pro_detail/{{ list.id }}" target="_blank">
+					<img width="220" height="240" ng-src="{{ list.imgPic }}">
+				</a>
+			</div>
+			<div class="info_box">
+				<div class="price">
+					<span class="price_sign">&yen;</span>
+					<span class="price_num">{{list.price02}}</span>
+				</div>
+				<div class="title">
+					<a href="#/pro_detail/{{ list.id }}" target="_blank">
+						<span class="pro_title">{{list.title}}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

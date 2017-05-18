@@ -1,0 +1,58 @@
+<section>
+	<!-- 商品 -->
+    <div class="product-wrapper">
+        <div class="product-l f_l">
+            <!-- 商品图片 -->
+            <div class="pro-preview">
+                <img ng-src="{{detailData.imgPic}}" />
+            </div>
+            <!-- 商品图片 End -->
+        </div>
+        <div class="product-r f_r">
+            <h3 class="product-title">{{detailData.title}}</h3>
+            <div class="attribute">
+                <p>
+                    <span>类 别：</span>
+                    <span>{{detailData.sort}}</span>
+                </p>
+                <p>
+                    <span>材 料：</span>
+                    <span>{{detailData.material}}</span>
+                </p>
+                <p>
+                    <span>包 装：</span>
+                    <span>{{detailData.package}}</span>
+                </p>
+                <p>
+                    <span>花 语：</span>
+                    <span>{{detailData.huayu}}</span>
+                </p>
+                <p>
+                    <span>说明：</span>
+                    <span class="text-primary">{{detailData.shuoming}}</span>
+                </p>
+            </div>
+            <div class="price">
+            	<p>市场价：￥{{detailData.price01}}</p>
+            	<p>花礼价：<strong>￥{{detailData.price02}}</strong></p>
+            </div>
+            <div class="btn-buy">
+                <a href="" ng-click="tocart()">
+                    <span class="iconfont"></span>加入购物车
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品 End -->
+	<!--商品详情-->
+	<div class="pro_detail">
+		<div ng-repeat="list in deImgDate">
+			<img ng-src = "{{list}}"/>
+		</div>
+	</div>
+	
+	
+	
+	<!--商品详情End-->
+
+</section>
